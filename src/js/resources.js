@@ -7,6 +7,7 @@ import button from "../images/menuButton.png";
 import Logo from "../images/Logo.png";
 import StartButton from "../images/StartButton.png"
 import Background2 from "../images/Background2.png"
+import zijlProto from "../images/zijlProto.png"
 
 
 
@@ -20,8 +21,9 @@ const Resources = {
     Logo: new ImageSource(Logo),
     StartButton: new ImageSource(StartButton),
     Background2: new ImageSource(Background2),
+    zijlProto: new ImageSource(zijlProto),
 
 };
-const ResourceLoader = new Loader([ Resources.Fish, Resources.Fish2, Resources.Fish3, Resources.Background, Resources.retryButton, Resources.Logo, Resources.StartButton, Resources.Background2]);
+const ResourceLoader = new Loader([Resources.Fish, Resources.Fish2, Resources.Fish3, Resources.Background, Resources.retryButton, Resources.Logo, Resources.StartButton, Resources.Background2, Resources.zijlProto]);
 
 export { Resources, ResourceLoader };
