@@ -10,6 +10,7 @@ export class MolenOnder extends Actor {
     constructor(sail) {
         super({width:Resources.boot.width, height:Resources.boot.height})
         this.MolenBoven = MolenBoven
+
     }
 
     onInitialize(engine) {

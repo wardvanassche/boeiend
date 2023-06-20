@@ -14,7 +14,7 @@ export class MolenBoven extends MolenOnder {
     onInitialize(engine) {
         this.engine = engine
         this.graphics.use(Resources.bovenkantMolen.toSprite())
-        this.pos = new Vector(0, -40)
+        this.pos = new Vector(0, -78)
         this.vel = new Vector(0, 0)
     }
 
