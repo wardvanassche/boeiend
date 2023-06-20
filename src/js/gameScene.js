@@ -5,6 +5,8 @@ import {Boei} from "./boei.js"
 import {Background} from "./mapLoader.js";
 import {MolenBoven} from "./molenboven.js";
 import {MolenOnder} from "./molenonder.js";
+import {Toren} from "./toren.js";
+import {Chinees} from "./chinees.js";
 
 export class gameScene extends Scene {
     constructor() {
@@ -44,7 +46,6 @@ export class gameScene extends Scene {
 
 
     onActivate(ctx) {
-
         const backgroundLoop = new Background();
         this.add(backgroundLoop);
         const sail = new Sail();
@@ -107,6 +108,12 @@ export class gameScene extends Scene {
         this.camera.strategy.elasticToActor(
             fish, 0.9, 0.9
         )
+
+        const toren = new Toren();
+        this.add(toren);
+
+        const chinees = new Chinees();
+        this.add(chinees);
     }
 
     updateScore(){
