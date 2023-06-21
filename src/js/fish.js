@@ -1,4 +1,4 @@
-import {Actor, Vector, Input, Engine} from "excalibur";
+import {Actor, Vector, Input, Engine, CollisionType} from "excalibur";
 import {ResourceLoader, Resources} from "./resources.js";
 import {Boei} from "./boei.js";
 export class Fish extends Actor {
@@ -8,6 +8,7 @@ export class Fish extends Actor {
     constructor(sail) {
         super({width:Resources.boot.width, height:Resources.boot.height})
         this.sail = sail
+
     }
 
     onInitialize(engine) {
@@ -16,6 +17,7 @@ export class Fish extends Actor {
         this.pos = new Vector(149, 500)
         this.vel = new Vector(0, 0)
         this.on('collisionstart', (event) => this.hitSomething(event))
+        this.body.collisionType = CollisionType.Active
     }
 
     hitSomething(event) {
@@ -63,11 +65,6 @@ export class Fish extends Actor {
         }
         if (this.rotation < 4.5 && this.rotation > 4 && this.sail.rotation <5.15 && this.sail.rotation >4.85) {
             speed = (90, 90);
-        }
-        if (this.pos <= new Vector(-41, this.pos.y)){
-            if (this.rotation > 1.5 && this.rotation < 4.5) {
-                this.pos = new Vector(-40, this.pos.y)
-            }
         }
 
 

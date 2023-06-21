@@ -1,4 +1,19 @@
-import {Actor, Engine, Random, Timer, Vector, Label, Color, Font, FontUnit, Scene, Class, } from "excalibur";
+import {
+    Actor,
+    Engine,
+    Random,
+    Timer,
+    Vector,
+    Label,
+    Color,
+    Font,
+    FontUnit,
+    EdgeCollider,
+    Scene,
+    Class,
+    Physics,
+    CollisionType,
+} from "excalibur";
 import {Fish} from "./fish.js";
 import {Sail} from "./sail.js";
 import {Boei} from "./boei.js"
@@ -7,6 +22,7 @@ import {MolenBoven} from "./molenboven.js";
 import {MolenOnder} from "./molenonder.js";
 import {Toren} from "./toren.js";
 import {Chinees} from "./chinees.js";
+import {Border} from "./border.js";
 
 export class gameScene extends Scene {
     constructor() {
@@ -25,6 +41,10 @@ export class gameScene extends Scene {
     gametimer
 
     onInitialize(Engine) {
+        const border1 = new Border(100,100,200,300)
+      this.add(border1)
+
+
         this.game = Engine
             this.timer2 = new Timer({
             fcn: () => this.spawn2(Engine),
