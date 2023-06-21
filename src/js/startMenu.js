@@ -39,6 +39,23 @@ export class startMenu extends Scene {
 
         this.add(this.StartButton)
 
+        this.infoButton = new Actor({
+            z: 100,
+            x: 65,
+            y: 65,
+            width: Resources.info.width,
+            height: Resources.info.height,
+            collisionType: CollisionType.PreventCollision
+        })
+        this.infoButton.graphics.use(Resources.info.toSprite())
+        this.infoButton.actions.scaleTo(vec(1.2,1.2),vec(1.2,1.2))
+        this.infoButton.on('pointerup', () => {
+            this.game.goToScene("infoScene")
+            this.game.removeScene("infoScene")
+        })
+
+        this.add(this.infoButton)
+
 
     }
 

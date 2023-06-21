@@ -12,6 +12,8 @@ import bovenkantMolen from "../images/bovenkantMolen.png"
 import onderkantMolen from "../images/onderkantMolen.png"
 import toren from "../images/toren.png"
 import chinees from "../images/chinees.png"
+import info from "../images/info.png"
+import informatie from "../images/informatie.png"
 
 
 
@@ -31,8 +33,10 @@ const Resources = {
     onderkantMolen: new ImageSource(onderkantMolen),
     toren: new ImageSource(toren),
     chinees: new ImageSource(chinees),
+    info: new ImageSource(info),
+    informatie: new ImageSource(informatie)
 
 };
-const ResourceLoader = new Loader([Resources.boot, Resources.boei, Resources.sailRight, Resources.Background, Resources.retryButton, Resources.Logo, Resources.StartButton, Resources.Background2, Resources.sailLeft, Resources.bovenkantMolen, Resources.onderkantMolen, Resources.toren, Resources.chinees]);
+const ResourceLoader = new Loader([Resources.informatie, Resources.info, Resources.boot, Resources.boei, Resources.sailRight, Resources.Background, Resources.retryButton, Resources.Logo, Resources.StartButton, Resources.Background2, Resources.sailLeft, Resources.bovenkantMolen, Resources.onderkantMolen, Resources.toren, Resources.chinees]);
 
 export { Resources, ResourceLoader };
