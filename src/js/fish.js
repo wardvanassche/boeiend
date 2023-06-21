@@ -66,11 +66,6 @@ export class Fish extends Actor {
         if (this.rotation < 4.5 && this.rotation > 4 && this.sail.rotation <5.15 && this.sail.rotation >4.85) {
             speed = (90, 90);
         }
-        if (this.pos <= new Vector(-41, this.pos.y)){
-            if (this.rotation > 1.5 && this.rotation < 4.5) {
-                this.pos = new Vector(-40, this.pos.y)
-            }
-        }
 
 
         if (

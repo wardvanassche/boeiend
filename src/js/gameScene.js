@@ -22,7 +22,7 @@ import {MolenBoven} from "./molenboven.js";
 import {MolenOnder} from "./molenonder.js";
 import {Toren} from "./toren.js";
 import {Chinees} from "./chinees.js";
-import {Border} from "./border.js"
+import {Border} from "./border.js";
 
 export class gameScene extends Scene {
     constructor() {
@@ -41,8 +41,9 @@ export class gameScene extends Scene {
     gametimer
 
     onInitialize(Engine) {
-        let linksboven = new Border(0,0,200,200)
-        this.add(linksboven)
+        const border1 = new Border(100,100,200,300)
+      this.add(border1)
+
 
         this.game = Engine
         this.timer2 = new Timer({
