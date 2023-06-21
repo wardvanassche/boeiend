@@ -14,7 +14,7 @@ export class Game extends Engine {
         this.random = new Random(1337)
 
     }
-q
+
     startGame(engine) {
 
         this.engine = engine
