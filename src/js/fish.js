@@ -13,7 +13,7 @@ export class Fish extends Actor {
     onInitialize(engine) {
         this.engine = engine
         this.graphics.use(Resources.boot.toSprite())
-        this.pos = new Vector(-128, 1318)
+        this.pos = new Vector(149, 500)
         this.vel = new Vector(0, 0)
         this.on('collisionstart', (event) => this.hitSomething(event))
     }
@@ -64,7 +64,11 @@ export class Fish extends Actor {
         if (this.rotation < 4.5 && this.rotation > 4 && this.sail.rotation <5.15 && this.sail.rotation >4.85) {
             speed = (90, 90);
         }
-
+        if (this.pos <= new Vector(-41, this.pos.y)){
+            if (this.rotation > 1.5 && this.rotation < 4.5) {
+                this.pos = new Vector(-40, this.pos.y)
+            }
+        }
 
 
         if (
@@ -88,8 +92,8 @@ export class Fish extends Actor {
         );
 
         this.vel = direction;
-
     }
+
     onPostUpdate(_engine, _delta) {
         super.onPostUpdate(_engine, _delta);
     }
