@@ -17,14 +17,13 @@ export class Fish extends Actor {
         this.vel = new Vector(0, 0)
         this.on('collisionstart', (event) => this.hitSomething(event))
     }
+
     hitSomething(event) {
         if (event.other instanceof Boei) {
             event.other.kill();
             this.engine.currentScene.updateScore()
         }
     }
-
-
 
     onPreUpdate(engine) {
         let speed = 0;
