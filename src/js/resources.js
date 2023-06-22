@@ -10,7 +10,10 @@ import Background2 from "../images/Background2.png"
 import sailLeft from "../images/sailLeft.png"
 import bovenkantMolen from "../images/bovenkantMolen.png"
 import onderkantMolen from "../images/onderkantMolen.png"
-
+import chinees from "../images/chinees.png"
+import toren from "../images/toren.png"
+import informatie from "../images/informatie.png"
+import info from "../images/info.png"
 
 
 
@@ -27,8 +30,12 @@ const Resources = {
     sailLeft: new ImageSource(sailLeft),
     bovenkantMolen: new ImageSource(bovenkantMolen),
     onderkantMolen: new ImageSource(onderkantMolen),
+    chinees: new ImageSource(chinees),
+    toren: new ImageSource(toren),
+    informatie: new ImageSource(informatie),
+    info: new ImageSource(info),
 
 };
-const ResourceLoader = new Loader([Resources.boot, Resources.boei, Resources.sailRight, Resources.Background, Resources.retryButton, Resources.Logo, Resources.StartButton, Resources.Background2, Resources.sailLeft, Resources.bovenkantMolen, Resources.onderkantMolen]);
+const ResourceLoader = new Loader([Resources.boot, Resources.boei, Resources.sailRight, Resources.Background, Resources.retryButton, Resources.Logo, Resources.StartButton, Resources.Background2, Resources.sailLeft, Resources.bovenkantMolen, Resources.onderkantMolen, Resources.chinees, Resources.toren, Resources.informatie, Resources.info]);
 
 export { Resources, ResourceLoader };
