@@ -230,9 +230,65 @@ export class gameScene extends Scene {
         const border63 = new Border(50,1890,0,-400)
         this.add(border63)
 
-        const border64 = new Border(50,1770,120,0)
+        const border64 = new Border(50,1760,120,0)
         this.add(border64)
 
+        const border65 = new Border(170,1760,70,-70)
+        this.add(border65)
+
+        const border66 = new Border(240,1690,-70,-70)
+        this.add(border66)
+
+        const border67 = new Border(170,1620,-120,0)
+        this.add(border67)
+
+        const border68 = new Border(170,1490,-120,0)
+        this.add(border68)
+
+        const border69 = new Border(10,1890,0,-400)
+        this.add(border69)
+
+        const border70 = new Border(10,1490,-125,0)
+        this.add(border70)
+
+        const border71 = new Border(10,1620,-125,0)
+        this.add(border71)
+
+        const border72 = new Border(-115,1620,0,-130)
+        this.add(border72)
+
+        const border73 = new Border(10,1760,-125,0)
+        this.add(border73)
+
+        const border74 = new Border(-140,1880,-170,0)
+        this.add(border74)
+
+        const border75 = new Border(-315,1870,-380,0)
+        this.add(border75)
+
+        const border76 = new Border(-695,1860,-90,0)
+        this.add(border76)
+
+        const border77 = new Border(-785,1860,-45,-70)
+        this.add(border77)
+
+        const border78 = new Border(-830,1790,0,-360)
+        this.add(border78)
+
+        const border79 = new Border(-830,1430,25,-85)
+        this.add(border79)
+
+        const border80 = new Border(-805,1345,185,-105)
+        this.add(border80)
+
+        const border81 = new Border(-620,1240,20,-40)
+        this.add(border81)
+
+        const border82 = new Border(-600,1200,0,-780)
+        this.add(border82)
+
+        const border83 = new Border(180,1200,-50,-780)
+        this.add(border83)
 
 
         this.game = Engine
