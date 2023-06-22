@@ -185,8 +185,53 @@ export class gameScene extends Scene {
         const border48 = new Border(1300,1545,-60,40)
         this.add(border48)
 
-        const border49 = new Border(1300,1545,-60,40)
+        const border49 = new Border(1240,1585,-10,80)
         this.add(border49)
+
+        const border50 = new Border(1230,1665,-30,30)
+        this.add(border50)
+
+        const border51 = new Border(1200,1695,-20,70)
+        this.add(border51)
+
+        const border52 = new Border(1180,1765,40,170)
+        this.add(border52)
+
+        const border53 = new Border(1220,1935,25,10)
+        this.add(border53)
+
+        const border54 = new Border(1245,1945,0,140)
+        this.add(border54)
+
+        const border55 = new Border(1245,2085,-25,60)
+        this.add(border55)
+
+        const border56 = new Border(1220,2145,-90,0)
+        this.add(border56)
+
+        const border57 = new Border(1130,2145,-55,-30)
+        this.add(border57)
+
+        const border58 = new Border(1075,2115,-75,-80)
+        this.add(border58)
+
+        const border59 = new Border(1000,2035,-25,-45)
+        this.add(border59)
+
+        const border60 = new Border(975,1995,-30,-30)
+        this.add(border60)
+
+        const border61 = new Border(945,1965,-230,-75)
+        this.add(border61)
+
+        const border62 = new Border(715,1890,-850,0)
+        this.add(border62)
+
+        const border63 = new Border(50,1890,0,-400)
+        this.add(border63)
+
+        const border64 = new Border(50,1770,120,0)
+        this.add(border64)
 
 
 
