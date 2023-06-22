@@ -34,8 +34,8 @@ export class gameover extends Scene {
         this.add(backgroundLoop);
         if(ctx.data) {
             this.mylabel = new Label({
-                text: `Score: ${ctx.data.score}`,
-                pos: new Vector(630, 330),
+                text: `Score: ${ctx.data.score}, Time: ${ctx.data.gametimer}`,
+                pos: new Vector(565, 330),
                 font: new Font({
                     family: 'impact',
                     size: 40,

@@ -1,4 +1,4 @@
-import {Actor, Engine, Input, Random, Vector, } from "excalibur"
+import {Actor, Engine, Input, Physics, Random, Vector,} from "excalibur"
 import {Resources, ResourceLoader } from './resources.js'
 import {gameScene} from "./gameScene.js";
 import {gameover} from "./gameover.js"
@@ -6,15 +6,18 @@ import {startMenu} from "./startMenu.js";
 
 ResourceLoader.suppressPlayButton = true
 
+
 export class Game extends Engine {
 
     constructor() {
         super({width: 1400, height: 700});
         this.start(ResourceLoader).then(() => this.startGame());
         this.random = new Random(1337)
-
+        Physics.useArcadePhysics()
+        Physics.gravity = new Vector(0,0)
+this.showDebug(true)
     }
-q
+
     startGame(engine) {
 
         this.engine = engine

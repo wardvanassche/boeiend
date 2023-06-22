@@ -24,49 +24,151 @@ export class Fish extends Actor {
         }
     }
 
-
-
     onPreUpdate(engine) {
         let speed = 0;
 
-        if (this.rotation < 5 && this.rotation > 4.5  && this.sail.rotation > 1.25 && this.sail.rotation < 1.36) {
+        // movement between rotation 0 and 0.5
+        if (this.rotation < 0.5 && this.rotation > 0  && this.sail.rotation > 0.3 && this.sail.rotation < 0.5) {
             speed = (90, 90);
         }
-        if (this.rotation < 5.5 && this.rotation > 5  && this.sail.rotation > 0.8 && this.sail.rotation <1.05) {
+        if (this.rotation < 0.5 && this.rotation > 0  && this.sail.rotation > 0.1 && this.sail.rotation < 0.3) {
+            speed = (60, 60);
+        }
+        if (this.rotation < 0.5 && this.rotation > 0  && this.sail.rotation > 0 && this.sail.rotation < 0.1) {
+            speed = (30, 30);
+        }
+
+        // movement between rotation 0.5 and 1
+        if (this.rotation < 1 && this.rotation > 0.5  && this.sail.rotation > 0.6 && this.sail.rotation < 0.9) {
             speed = (90, 90);
         }
-        if (this.rotation < 6 && this.rotation > 5.5  && this.sail.rotation > 0.6 && this.sail.rotation <0.85) {
-            speed = (90, 90);
+        if (this.rotation < 1 && this.rotation > 0.5  && this.sail.rotation > 0.35 && this.sail.rotation < 0.6) {
+            speed = (60, 60);
         }
-        if ((this.rotation < .5 && this.rotation > 0 || this.rotation < 6.5 && this.rotation > 6 ) && this.sail.rotation > 0.35 && this.sail.rotation <0.6) {
-            speed = (90, 90);
+        if (this.rotation < 1 && this.rotation > 0.5  && this.sail.rotation > 0 && this.sail.rotation < 0.35) {
+            speed = (30, 30);
         }
-        if (this.rotation < 1 && this.rotation > 0.5  && this.sail.rotation > 0.2 && this.sail.rotation <0.45) {
-            speed = (90, 90);
+
+        // movement between rotation 1 and 1.5
+        if (this.rotation < 1.5 && this.rotation > 1  && (this.sail.rotation > 0.25 && this.sail.rotation < 0.5 || this.sail.rotation > 6 && this.sail.rotation < 6.15)) {
+            speed = (30, 30);
         }
-        if (this.rotation < 1.5 && this.rotation > 1 && this.sail.rotation > 0 && this.sail.rotation <0.25) {
-            speed = (90, 90);
+        if (this.rotation < 1.5 && this.rotation > 1  && (this.sail.rotation > 0.15 && this.sail.rotation < 0.25 || this.sail.rotation > 6.15 && this.sail.rotation < 6.3)) {
+            speed = (60, 60);
         }
-        if (this.rotation < 2 && this.rotation > 1.5 && this.sail.rotation > 6 && this.sail.rotation <6.3) {
-            speed = (90, 90);
-        }
-        if (this.rotation < 2.5 && this.rotation > 2 && this.sail.rotation > 5.75 && this.sail.rotation <6) {
-            speed = (90, 90);
-        }
-        if (this.rotation < 3 && this.rotation > 2.5 && this.sail.rotation > 5 && this.sail.rotation <5.75) {
-            speed = (90, 90);
-        }
-        if (this.rotation < 3.5 && this.rotation > 3 && this.sail.rotation > 4.8 && this.sail.rotation <5.5) {
-            speed = (90, 90);
-        }
-        if (this.rotation < 4 && this.rotation > 3.5 && this.sail.rotation > 4.4 && this.sail.rotation <5.2) {
-            speed = (90, 90);
-        }
-        if (this.rotation < 4.5 && this.rotation > 4 && this.sail.rotation <5.15 && this.sail.rotation >4.85) {
+        if (this.rotation < 1.5 && this.rotation > 1  && (this.sail.rotation > 0 && this.sail.rotation < 0.15 || this.sail.rotation > 6.3 && this.sail.rotation < 6.5)) {
             speed = (90, 90);
         }
 
+        // movement between rotation 1.5 and 2
+        if (this.rotation < 2 && this.rotation > 1.5  && this.sail.rotation > 6.1 && this.sail.rotation < 6.5) {
+            speed = (90, 90);
+        }
+        if (this.rotation < 2 && this.rotation > 1.5  && this.sail.rotation > 6 && this.sail.rotation < 6.1) {
+            speed = (60, 60);
+        }
+        if (this.rotation < 2 && this.rotation > 1.5  && this.sail.rotation > 5.8 && this.sail.rotation < 6) {
+            speed = (30, 30);
+        }
 
+        // movement between rotation 2 and 2.5
+        if (this.rotation < 2.5 && this.rotation > 2  && this.sail.rotation > 5.8 && this.sail.rotation < 6.1) {
+            speed = (90, 90);
+        }
+        if (this.rotation < 2.5 && this.rotation > 2  && this.sail.rotation > 6.1 && this.sail.rotation < 6.3) {
+            speed = (60, 60);
+        }
+        if (this.rotation < 2.5 && this.rotation > 2  && this.sail.rotation > 6.3 && this.sail.rotation < 6.5) {
+            speed = (30, 30);
+        }
+
+        // movement between rotation 2.5 and 3
+        if (this.rotation < 3 && this.rotation > 2.5  && this.sail.rotation > 5.5 && this.sail.rotation < 5.8) {
+            speed = (90, 90);
+        }
+        if (this.rotation < 3 && this.rotation > 2.5  && this.sail.rotation > 5.8 && this.sail.rotation < 6) {
+            speed = (60, 60);
+        }
+        if (this.rotation < 3 && this.rotation > 2.5  && this.sail.rotation > 6 && this.sail.rotation < 6.3) {
+            speed = (30, 30);
+        }
+
+        // movement between rotation 3 and 3.5
+        if (this.rotation < 3.5 && this.rotation > 3  && this.sail.rotation > 5.8 && this.sail.rotation < 6) {
+            speed = (90, 90);
+        }
+        if (this.rotation < 3.5 && this.rotation > 3  && this.sail.rotation > 6 && this.sail.rotation < 6.3) {
+            speed = (60, 60);
+        }
+        if (this.rotation < 3.5 && this.rotation > 3  && this.sail.rotation > 6.3 && this.sail.rotation < 6.5) {
+            speed = (30, 30);
+        }
+
+        // movement between rotation 3.5 and 4
+        if (this.rotation < 4 && this.rotation > 3.5  && this.sail.rotation > 5.5 && this.sail.rotation < 5.8) {
+            speed = (90, 90);
+        }
+        if (this.rotation < 4 && this.rotation > 3.5  && this.sail.rotation > 5.8 && this.sail.rotation < 6) {
+            speed = (60, 60);
+        }
+        if (this.rotation < 4 && this.rotation > 3.5  && this.sail.rotation > 6 && this.sail.rotation < 6.2) {
+            speed = (30, 30);
+        }
+
+        // movement between rotation 4 and 4.5
+        if (this.rotation < 4.5 && this.rotation > 4  && this.sail.rotation > 5.25 && this.sail.rotation < 5.5) {
+            speed = (90, 90);
+        }
+        if (this.rotation < 4.5 && this.rotation > 4  && this.sail.rotation > 5.5 && this.sail.rotation < 5.75) {
+            speed = (60, 60);
+        }
+        if (this.rotation < 4.5 && this.rotation > 4  && this.sail.rotation > 5.75 && this.sail.rotation < 5.9) {
+            speed = (30, 30);
+        }
+
+        // movement between rotation 4.5 and 5
+        if (this.rotation < 5 && this.rotation > 4.5 && (this.sail.rotation > 4.85 && this.sail.rotation < 5.1 || this.sail.rotation > 1.2 && this.sail.rotation < 1.35)) {
+            speed = (90, 90);
+        }
+        if (this.rotation < 5 && this.rotation > 4.5  && (this.sail.rotation > 5.1 && this.sail.rotation < 5.3 || this.sail.rotation > 1 && this.sail.rotation < 1.2)) {
+            speed = (60, 60);
+        }
+        if (this.rotation < 5 && this.rotation > 4.5  && (this.sail.rotation > 5.3 && this.sail.rotation < 5.6 || this.sail.rotation > 0.8 && this.sail.rotation < 1)) {
+            speed = (30, 30);
+        }
+
+        // movement between rotation 5 and 5.5
+        if (this.rotation < 5.5 && this.rotation > 5  && this.sail.rotation > 0.7 && this.sail.rotation < 0.9) {
+            speed = (90, 90);
+        }
+        if (this.rotation < 5.5 && this.rotation > 5  && this.sail.rotation > 0.5 && this.sail.rotation < 0.7) {
+            speed = (60, 60);
+        }
+        if (this.rotation < 5.5 && this.rotation > 5  && this.sail.rotation > 0.3 && this.sail.rotation < 0.5) {
+            speed = (30, 30);
+        }
+
+        // movement between rotation 5.5 and 6
+        if (this.rotation < 6 && this.rotation > 5.5  && this.sail.rotation > 1.25 && this.sail.rotation < 1.36) {
+            speed = (90, 90);
+        }
+        if (this.rotation < 6 && this.rotation > 5.5  && this.sail.rotation > 1.25 && this.sail.rotation < 1.36) {
+            speed = (60, 60);
+        }
+        if (this.rotation < 6 && this.rotation > 5.5  && this.sail.rotation > 1.25 && this.sail.rotation < 1.36) {
+            speed = (30, 30);
+        }
+
+        // movement between rotation 6 and 6.5
+        if (this.rotation < 6.5 && this.rotation > 6  && this.sail.rotation > 1.25 && this.sail.rotation < 1.36) {
+            speed = (90, 90);
+        }
+        if (this.rotation < 6.5 && this.rotation > 6  && this.sail.rotation > 1.25 && this.sail.rotation < 1.36) {
+            speed = (60, 60);
+        }
+        if (this.rotation < 6.5 && this.rotation > 6  && this.sail.rotation > 1.25 && this.sail.rotation < 1.36) {
+            speed = (30, 30);
+        }
 
         if (
             engine.input.keyboard.isHeld(Input.Keys.D)

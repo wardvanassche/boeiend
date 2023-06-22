@@ -1,10 +1,28 @@
-import {Actor, Engine, Random, Timer, Vector, Label, Color, Font, FontUnit, Scene, Class, } from "excalibur";
+import {
+    Actor,
+    Engine,
+    Random,
+    Timer,
+    Vector,
+    Label,
+    Color,
+    Font,
+    FontUnit,
+    EdgeCollider,
+    Scene,
+    Class,
+    Physics,
+    CollisionType,
+} from "excalibur";
 import {Fish} from "./fish.js";
 import {Sail} from "./sail.js";
 import {Boei} from "./boei.js"
 import {Background} from "./mapLoader.js";
 import {MolenBoven} from "./molenboven.js";
 import {MolenOnder} from "./molenonder.js";
+import {Toren} from "./toren.js";
+import {Chinees} from "./chinees.js";
+import {Border} from "./border.js";
 
 export class gameScene extends Scene {
     constructor() {
@@ -23,15 +41,18 @@ export class gameScene extends Scene {
     gametimer
 
     onInitialize(Engine) {
+        const border1 = new Border(100,100,200,300)
+      this.add(border1)
+
+
         this.game = Engine
-        this.timer2 = new Timer({
+            this.timer2 = new Timer({
             fcn: () => this.spawn2(Engine),
             interval: 1000,
             repeats: true
 
         })
         Engine.currentScene.add(this.timer2)
-        this.timer2.start()
 
             this.timer = new Timer({
                 fcn: () => this.spawn(Engine),
@@ -44,7 +65,6 @@ export class gameScene extends Scene {
 
 
     onActivate(ctx) {
-
         const backgroundLoop = new Background();
         this.add(backgroundLoop);
         const sail = new Sail();
@@ -56,7 +76,7 @@ export class gameScene extends Scene {
         this.add(molenOnder)
         molenOnder.addChild(molenBoven)
         this.score = 0
-        this.gametimer = 1000
+        this.gametimer = 90
         this.counter = 0
         this.i = 0
         this.mylabel = new Label({
@@ -94,7 +114,7 @@ export class gameScene extends Scene {
         this.add(this.mylabel3)
 
         this.mylabel4 = new Label({
-            text: `00:${this.gametimer}`,
+            text: `${this.gametimer}s`,
             font: new Font({
                 family: 'impact',
                 size: 40,
@@ -107,14 +127,26 @@ export class gameScene extends Scene {
         this.camera.strategy.elasticToActor(
             fish, 0.9, 0.9
         )
+
+        const toren = new Toren();
+        this.add(toren);
+
+        const chinees = new Chinees();
+        this.add(chinees);
     }
 
     updateScore(){
         this.score++
         this.mylabel.text = `Score: ${this.score}`
         if (this.score == 15){
-            this.engine.goToScene("gameover", { score: this.score })
+            this.engine.goToScene("gameover", { score: this.score, gametimer: this.gametimer })
         }
+        this.timer2.start()
+    }
+    delScore(){
+        this.score--
+        this.mylabel.text = `Score: ${this.score}`
+
     }
 
 
@@ -135,21 +167,28 @@ export class gameScene extends Scene {
         )
         this.add(boei)
         this.counter++
-        if (this.counter == 5){
+        this.on('collisionstart', (event) => this.hitSomething(event))
+        if (this.counter == 17){
             this.timer.stop()
+        }
+    }
+    hitSomething(event){
+        if (event.other instanceof Fish) {
+            this.pos = new Vector(getRandomNum(149, 2398), getRandomNum(-942, 1045))
+            this.delScore()
         }
     }
     spawn2(engine) {
 
         this.gametimer--
         if (this.gametimer >9) {
-            this.mylabel4.text = `00:${this.gametimer}`
+            this.mylabel4.text = `${this.gametimer}s`
         }
-        else {this.mylabel4.text = `00:0${this.gametimer}`}
+        else {this.mylabel4.text = `${this.gametimer}s`}
 
         if (this.gametimer == 0){
             this.timer2.stop()
-            this.engine.goToScene("gameover", { score: this.score })
+            this.engine.goToScene("gameover", { score: this.score, gametimer: this.gametimer })
         }
     }
 

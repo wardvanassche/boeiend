@@ -16,7 +16,7 @@ export class MolenOnder extends Actor {
     onInitialize(engine) {
         this.engine = engine
         this.graphics.use(Resources.onderkantMolen.toSprite())
-        this.pos = new Vector(1200, 350)
+        this.pos = new Vector(2800, 400)
         this.vel = new Vector(0, 0)
     }
 
