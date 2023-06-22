@@ -8,12 +8,13 @@ export class Fish extends Actor {
     constructor(sail) {
         super({width:Resources.boot.width, height:Resources.boot.height})
         this.sail = sail
+
     }
 
     onInitialize(engine) {
         this.engine = engine
         this.graphics.use(Resources.boot.toSprite())
-        this.pos = new Vector(1800, 1400)
+        this.pos = new Vector(149, 500)
         this.vel = new Vector(0, 0)
         this.on('collisionstart', (event) => this.hitSomething(event))
         this.body.collisionType = CollisionType.Active
