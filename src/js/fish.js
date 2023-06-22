@@ -15,7 +15,6 @@ export class Fish extends Actor {
         this.engine = engine
         this.graphics.use(Resources.boot.toSprite())
         this.pos = new Vector(149, 500)
-        this.vel = new Vector(0, 0)
         this.on('collisionstart', (event) => this.hitSomething(event))
         this.body.collisionType = CollisionType.Active
     }
@@ -28,7 +27,7 @@ export class Fish extends Actor {
     }
 
     onPreUpdate(engine) {
-        let speed = 0;
+        let speed = 25;
 
         // movement between rotation 0 and 0.5
         if (this.rotation < 0.5 && this.rotation > 0  && this.sail.rotation > 0.3 && this.sail.rotation < 0.5) {
