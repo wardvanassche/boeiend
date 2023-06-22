@@ -6,7 +6,7 @@ export class Fish extends Actor {
     sail
 
     constructor(sail) {
-        super({width: Resources.boot.width, height: Resources.boot.height/2})
+        super({width: Resources.boot.width, height: Resources.boot.height/1.5})
         this.sail = sail
 
     }
@@ -27,7 +27,7 @@ export class Fish extends Actor {
     }
 
     onPreUpdate(engine) {
-        let speed = 0;
+        let speed = 25;
 
         // movement between rotation 0 and 0.5
         if (this.rotation < 0.5 && this.rotation > 0  && this.sail.rotation > 0.3 && this.sail.rotation < 0.5) {
