@@ -158,8 +158,36 @@ export class gameScene extends Scene {
         const border39 = new Border(1820,1645,-20,-25)
         this.add(border39)
 
-        const border40 = new Border(1800,1620,-105,75)
+        const border40 = new Border(1800,1620,-105,65)
         this.add(border40)
+
+        const border41 = new Border(1695,1685,-60,55)
+        this.add(border41)
+
+        const border42 = new Border(1635,1740,-70,0)
+        this.add(border42)
+
+        const border43 = new Border(1565,1740,-5,-40)
+        this.add(border43)
+
+        const border44 = new Border(1560,1700,-80,-65)
+        this.add(border44)
+
+        const border45 = new Border(1480,1635,-70,-25)
+        this.add(border45)
+
+        const border46 = new Border(1410,1610,-65,-65)
+        this.add(border46)
+
+        const border47 = new Border(1345,1545,-45,0)
+        this.add(border47)
+
+        const border48 = new Border(1300,1545,-60,40)
+        this.add(border48)
+
+        const border49 = new Border(1300,1545,-60,40)
+        this.add(border49)
+
 
 
         this.game = Engine
