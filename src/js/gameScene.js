@@ -158,8 +158,137 @@ export class gameScene extends Scene {
         const border39 = new Border(1820,1645,-20,-25)
         this.add(border39)
 
-        const border40 = new Border(1800,1620,-105,75)
+        const border40 = new Border(1800,1620,-105,65)
         this.add(border40)
+
+        const border41 = new Border(1695,1685,-60,55)
+        this.add(border41)
+
+        const border42 = new Border(1635,1740,-70,0)
+        this.add(border42)
+
+        const border43 = new Border(1565,1740,-5,-40)
+        this.add(border43)
+
+        const border44 = new Border(1560,1700,-80,-65)
+        this.add(border44)
+
+        const border45 = new Border(1480,1635,-70,-25)
+        this.add(border45)
+
+        const border46 = new Border(1410,1610,-65,-65)
+        this.add(border46)
+
+        const border47 = new Border(1345,1545,-45,0)
+        this.add(border47)
+
+        const border48 = new Border(1300,1545,-60,40)
+        this.add(border48)
+
+        const border49 = new Border(1240,1585,-10,80)
+        this.add(border49)
+
+        const border50 = new Border(1230,1665,-30,30)
+        this.add(border50)
+
+        const border51 = new Border(1200,1695,-20,70)
+        this.add(border51)
+
+        const border52 = new Border(1180,1765,40,170)
+        this.add(border52)
+
+        const border53 = new Border(1220,1935,25,10)
+        this.add(border53)
+
+        const border54 = new Border(1245,1945,0,140)
+        this.add(border54)
+
+        const border55 = new Border(1245,2085,-25,60)
+        this.add(border55)
+
+        const border56 = new Border(1220,2145,-90,0)
+        this.add(border56)
+
+        const border57 = new Border(1130,2145,-55,-30)
+        this.add(border57)
+
+        const border58 = new Border(1075,2115,-75,-80)
+        this.add(border58)
+
+        const border59 = new Border(1000,2035,-25,-45)
+        this.add(border59)
+
+        const border60 = new Border(975,1995,-30,-30)
+        this.add(border60)
+
+        const border61 = new Border(945,1965,-230,-75)
+        this.add(border61)
+
+        const border62 = new Border(715,1890,-850,0)
+        this.add(border62)
+
+        const border63 = new Border(50,1890,0,-400)
+        this.add(border63)
+
+        const border64 = new Border(50,1760,120,0)
+        this.add(border64)
+
+        const border65 = new Border(170,1760,70,-70)
+        this.add(border65)
+
+        const border66 = new Border(240,1690,-70,-70)
+        this.add(border66)
+
+        const border67 = new Border(170,1620,-120,0)
+        this.add(border67)
+
+        const border68 = new Border(170,1490,-120,0)
+        this.add(border68)
+
+        const border69 = new Border(10,1890,0,-400)
+        this.add(border69)
+
+        const border70 = new Border(10,1490,-125,0)
+        this.add(border70)
+
+        const border71 = new Border(10,1620,-125,0)
+        this.add(border71)
+
+        const border72 = new Border(-115,1620,0,-130)
+        this.add(border72)
+
+        const border73 = new Border(10,1760,-125,0)
+        this.add(border73)
+
+        const border74 = new Border(-140,1880,-170,0)
+        this.add(border74)
+
+        const border75 = new Border(-315,1870,-380,0)
+        this.add(border75)
+
+        const border76 = new Border(-695,1860,-90,0)
+        this.add(border76)
+
+        const border77 = new Border(-785,1860,-45,-70)
+        this.add(border77)
+
+        const border78 = new Border(-830,1790,0,-360)
+        this.add(border78)
+
+        const border79 = new Border(-830,1430,25,-85)
+        this.add(border79)
+
+        const border80 = new Border(-805,1345,185,-105)
+        this.add(border80)
+
+        const border81 = new Border(-620,1240,20,-40)
+        this.add(border81)
+
+        const border82 = new Border(-600,1200,0,-780)
+        this.add(border82)
+
+        const border83 = new Border(180,1200,-50,-780)
+        this.add(border83)
 
 
         this.game = Engine
