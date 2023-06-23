@@ -23,8 +23,6 @@ import {MolenOnder} from "./molenonder.js";
 import {Toren} from "./toren.js";
 import {Chinees} from "./chinees.js";
 import {Border} from "./border.js";
-import {Background2} from "./mapLoader2.js";
-import {Wolken} from "./Wolken.js";
 
 export class gameScene extends Scene {
     constructor() {
@@ -499,7 +497,6 @@ export class gameScene extends Scene {
 
 
     onActivate(ctx) {
-
         const backgroundLoop = new Background();
         this.add(backgroundLoop);
         const sail = new Sail();
@@ -510,15 +507,6 @@ export class gameScene extends Scene {
         const molenOnder = new MolenOnder(molenBoven);
         this.add(molenOnder)
         molenOnder.addChild(molenBoven)
-        const toren = new Toren();
-        this.add(toren);
-        const chinees = new Chinees();
-        this.add(chinees);
-        const wolken = new Wolken({
-            height: 900,
-            width: 1440,
-        })
-        this.add(wolken);
         this.score = 0
         this.gametimer = 90
         this.counter = 0
@@ -572,7 +560,11 @@ export class gameScene extends Scene {
             fish, 0.9, 0.9
         )
 
+        const toren = new Toren();
+        this.add(toren);
 
+        const chinees = new Chinees();
+        this.add(chinees);
     }
 
     updateScore(){
