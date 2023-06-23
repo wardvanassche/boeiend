@@ -32,7 +32,7 @@ export class Wolken extends Actor {
 
         this.graphics.anchor = new Vector(0,0)
         this.graphics.add(group3)
-        this.pos = new Vector(0, 0)
+        this.pos = new Vector(-900, 0)
         this.scale = new Vector(4,4)
         this.vel = new Vector(0, -50)
     }
