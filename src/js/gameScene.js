@@ -487,9 +487,8 @@ export class gameScene extends Scene {
             repeats: true
 
         })
-        /*
         Engine.currentScene.add(this.timer2)
-
+/*
             this.timer = new Timer({
                 fcn: () => this.spawn(Engine),
                 interval: 30,
@@ -497,12 +496,13 @@ export class gameScene extends Scene {
             })
             Engine.currentScene.add(this.timer)
             this.timer.start()
-         */
+
+ */
+
 
     }
 
     music = Resources.music;
-//test
 
     onActivate(ctx) {
         this.music.play(.5).then(r => console.log(r));
@@ -533,7 +533,7 @@ export class gameScene extends Scene {
         this.add(wolken);
         this.score = 0
         this.gametimer = 90
-        //this.counter = 0
+        this.counter = 0
         this.i = 0
         this.mylabel = new Label({
             text: `Score: ${this.score}`,
@@ -610,8 +610,8 @@ export class gameScene extends Scene {
 
 
     }
-/*
-    spawn(engine) {
+
+    /*spawn(engine) {
 
         const boei = new Boei(
         )
@@ -623,7 +623,9 @@ export class gameScene extends Scene {
         }
     }
 
- */
+     */
+
+
 
     hitSomething(event){
         if (event.other instanceof Fish) {
