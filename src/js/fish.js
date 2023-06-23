@@ -21,7 +21,6 @@ export class Fish extends Actor {
 
     hitSomething(event) {
         if (event.other instanceof Boei) {
-            event.other.kill();
             this.engine.currentScene.updateScore()
         }
     }

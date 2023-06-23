@@ -1,4 +1,4 @@
-import {Actor, Vector, Input, Engine} from "excalibur";
+import {Actor, Vector, Input, Engine, CollisionType} from "excalibur";
 import {ResourceLoader, Resources} from "./resources.js";
 import {Fish} from "./fish.js";
 export class Sail extends Fish {
@@ -12,6 +12,7 @@ export class Sail extends Fish {
         this.graphics.use(Resources.sailLeft.toSprite())
         this.pos = new Vector(35,0)
         this.vel = new Vector(0, 0)
+        this.body.collisionType = CollisionType.PreventCollision
     }
 
 

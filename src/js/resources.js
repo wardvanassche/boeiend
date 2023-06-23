@@ -14,6 +14,7 @@ import chinees from "../images/chinees.png"
 import toren from "../images/toren.png"
 import informatie from "../images/informatie.png"
 import info from "../images/info.png"
+import boei2 from "../images/boei2.png"
 
 
 
@@ -34,8 +35,9 @@ const Resources = {
     toren: new ImageSource(toren),
     informatie: new ImageSource(informatie),
     info: new ImageSource(info),
+    boei2: new ImageSource(boei2),
 
 };
-const ResourceLoader = new Loader([Resources.boot, Resources.boei, Resources.sailRight, Resources.Background, Resources.retryButton, Resources.Logo, Resources.StartButton, Resources.Background2, Resources.sailLeft, Resources.bovenkantMolen, Resources.onderkantMolen, Resources.chinees, Resources.toren, Resources.informatie, Resources.info]);
+const ResourceLoader = new Loader([Resources.boot, Resources.boei, Resources.boei2, Resources.sailRight, Resources.Background, Resources.retryButton, Resources.Logo, Resources.StartButton, Resources.Background2, Resources.sailLeft, Resources.bovenkantMolen, Resources.onderkantMolen, Resources.chinees, Resources.toren, Resources.informatie, Resources.info]);
 
 export { Resources, ResourceLoader };

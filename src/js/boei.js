@@ -1,4 +1,4 @@
-import {Actor, Vector, Input, Engine} from "excalibur";
+import {Actor, Vector, Input, Engine, CollisionType} from "excalibur";
 import {ResourceLoader, Resources} from "./resources.js";
 import {Fish} from "./fish.js";
 function getRandomNum(min, max) {
@@ -23,5 +23,11 @@ export class Boei extends Actor {
         if (event.other instanceof Boei) {
             this.pos = new Vector(getRandomNum(149, 2398), getRandomNum(-942, 1045))
         }
+        if (event.other instanceof Fish) {
+           this.graphics.use(Resources.boei2.toSprite())
+            this.body.collisionType = CollisionType.PreventCollision
+        }
     }
+
+
 }
