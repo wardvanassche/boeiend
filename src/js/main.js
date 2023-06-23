@@ -16,7 +16,7 @@ export class Game extends Engine {
         this.random = new Random(1337)
         Physics.useArcadePhysics()
         Physics.gravity = new Vector(0,0)
-this.showDebug(true)
+// this.showDebug(true)
     }
 
     startGame(engine) {
