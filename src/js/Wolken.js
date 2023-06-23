@@ -15,7 +15,7 @@ export class Wolken extends Actor {
 
     onInitialize(engine){
         const spaceImage2 = Resources.wolken.toSprite()
-        this.offset = spaceImage2.width
+        this.offset = spaceImage2.height
 
         const group2 = new GraphicsGroup({
             members: [
@@ -25,7 +25,7 @@ export class Wolken extends Actor {
                 },
                 {
                     graphic: spaceImage2,
-                    pos: new Vector(spaceImage2.width, 0),
+                    pos: new Vector(0, spaceImage2.height),
                 }
             ]
         })
