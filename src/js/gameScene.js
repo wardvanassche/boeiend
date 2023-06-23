@@ -501,7 +501,7 @@ export class gameScene extends Scene {
     }
 
     music = Resources.music;
-
+//test
 
     onActivate(ctx) {
         this.music.play(.5).then(r => console.log(r));

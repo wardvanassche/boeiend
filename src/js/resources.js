@@ -17,6 +17,7 @@ import info from "../images/info.png"
 import boei2 from "../images/boei2.png"
 import music from "../images/bgm.mp3"
 import wolken from "../images/wolken.png"
+import getPoint from "../images/getPoint.mp3"
 
 
 
@@ -39,9 +40,10 @@ const Resources = {
     info: new ImageSource(info),
     boei2: new ImageSource(boei2),
     music: new Sound(music),
-    wolken: new ImageSource(wolken)
+    wolken: new ImageSource(wolken),
+    getPoint: new Sound(getPoint)
 
 };
-const ResourceLoader = new Loader([Resources.boot, Resources.wolken, Resources.music, Resources.boei, Resources.boei2, Resources.sailRight, Resources.Background, Resources.retryButton, Resources.Logo, Resources.StartButton, Resources.Background2, Resources.sailLeft, Resources.bovenkantMolen, Resources.onderkantMolen, Resources.chinees, Resources.toren, Resources.informatie, Resources.info]);
+const ResourceLoader = new Loader([Resources.getPoint, Resources.boot, Resources.wolken, Resources.music, Resources.boei, Resources.boei2, Resources.sailRight, Resources.Background, Resources.retryButton, Resources.Logo, Resources.StartButton, Resources.Background2, Resources.sailLeft, Resources.bovenkantMolen, Resources.onderkantMolen, Resources.chinees, Resources.toren, Resources.informatie, Resources.info]);
 
 export { Resources, ResourceLoader };

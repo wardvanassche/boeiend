@@ -7,6 +7,7 @@ function getRandomNum(min, max) {
 
 export class Boei extends Actor {
     score
+    getPoint = Resources.getPoint;
 
     constructor() {
         super({width: Resources.boei.width, height: Resources.boei.height})
@@ -18,13 +19,13 @@ export class Boei extends Actor {
         this.pos = new Vector(getRandomNum(149, 2398), getRandomNum(-942, 1045))
         this.on('collisionstart', (event) => this.hitSomething(event))
     }
-
     hitSomething(event) {
         if (event.other instanceof Boei) {
             this.pos = new Vector(getRandomNum(149, 2398), getRandomNum(-942, 1045))
         }
         if (event.other instanceof Fish) {
            this.graphics.use(Resources.boei2.toSprite())
+            this.getPoint.play(.5).then(r => console.log(r));
             this.body.collisionType = CollisionType.PreventCollision
         }
     }
