@@ -487,8 +487,9 @@ export class gameScene extends Scene {
             repeats: true
 
         })
+        /*
         Engine.currentScene.add(this.timer2)
-/*
+
             this.timer = new Timer({
                 fcn: () => this.spawn(Engine),
                 interval: 30,
@@ -496,8 +497,8 @@ export class gameScene extends Scene {
             })
             Engine.currentScene.add(this.timer)
             this.timer.start()
+         */
 
- */
     }
 
     music = Resources.music;
@@ -507,10 +508,12 @@ export class gameScene extends Scene {
         this.music.play(.5).then(r => console.log(r));
         const backgroundLoop = new Background();
         this.add(backgroundLoop);
+
         for (let i = 0; i<18; i++){
             const boei = new Boei
             this.add(boei)
         }
+
         const sail = new Sail();
         const fish = new Fish(sail);
         this.add(fish);
@@ -530,7 +533,7 @@ export class gameScene extends Scene {
         this.add(wolken);
         this.score = 0
         this.gametimer = 90
-        this.counter = 0
+        //this.counter = 0
         this.i = 0
         this.mylabel = new Label({
             text: `Score: ${this.score}`,
@@ -619,7 +622,9 @@ export class gameScene extends Scene {
             this.timer.stop()
         }
     }
+
  */
+
     hitSomething(event){
         if (event.other instanceof Fish) {
             this.pos = new Vector(getRandomNum(149, 2398), getRandomNum(-942, 1045))
