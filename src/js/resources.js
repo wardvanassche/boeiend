@@ -15,6 +15,7 @@ import toren from "../images/toren.png"
 import informatie from "../images/informatie.png"
 import info from "../images/info.png"
 import boei2 from "../images/boei2.png"
+import music from "../images/bgm.mp3"
 
 
 
@@ -36,8 +37,9 @@ const Resources = {
     informatie: new ImageSource(informatie),
     info: new ImageSource(info),
     boei2: new ImageSource(boei2),
+    music: new Sound(music)
 
 };
-const ResourceLoader = new Loader([Resources.boot, Resources.boei, Resources.boei2, Resources.sailRight, Resources.Background, Resources.retryButton, Resources.Logo, Resources.StartButton, Resources.Background2, Resources.sailLeft, Resources.bovenkantMolen, Resources.onderkantMolen, Resources.chinees, Resources.toren, Resources.informatie, Resources.info]);
+const ResourceLoader = new Loader([Resources.boot, Resources.music, Resources.boei, Resources.boei2, Resources.sailRight, Resources.Background, Resources.retryButton, Resources.Logo, Resources.StartButton, Resources.Background2, Resources.sailLeft, Resources.bovenkantMolen, Resources.onderkantMolen, Resources.chinees, Resources.toren, Resources.informatie, Resources.info]);
 
 export { Resources, ResourceLoader };

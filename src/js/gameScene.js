@@ -23,6 +23,7 @@ import {MolenOnder} from "./molenonder.js";
 import {Toren} from "./toren.js";
 import {Chinees} from "./chinees.js";
 import {Border} from "./border.js";
+import {Resources} from "./resources.js";
 
 export class gameScene extends Scene {
     constructor() {
@@ -495,8 +496,11 @@ export class gameScene extends Scene {
             this.timer.start()
     }
 
+    music = Resources.music;
+
 
     onActivate(ctx) {
+        this.music.play(.5).then(r => console.log(r));
         const backgroundLoop = new Background();
         this.add(backgroundLoop);
         const sail = new Sail();
@@ -507,6 +511,7 @@ export class gameScene extends Scene {
         const molenOnder = new MolenOnder(molenBoven);
         this.add(molenOnder)
         molenOnder.addChild(molenBoven)
+
         this.score = 0
         this.gametimer = 90
         this.counter = 0
