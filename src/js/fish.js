@@ -6,7 +6,7 @@ export class Fish extends Actor {
     sail
 
     constructor(sail) {
-        super({width:Resources.boot.width, height:Resources.boot.height})
+        super({width: Resources.boot.width, height: Resources.boot.height/1.5})
         this.sail = sail
 
     }
